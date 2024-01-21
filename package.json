@@ -1,25 +1,37 @@
 {
-  "name": "nuxt-app",
+  "name": "mechanico",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.10.3",
-    "@vicons/fluent": "^0.12.0",
-    "@vicons/utils": "^0.1.4",
-    "nuxt": "^3.8.2",
-    "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@tresjs/cientos": "^3.7.0",
-    "@tresjs/nuxt": "^2.0.1"
+    "@react-three/fiber": "^8.15.14",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "sort-by": "^0.0.2",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@ricons/fluent": "^0.12.0",
+    "@ricons/utils": "^0.1.6",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8"
   }
 }
