@@ -1,6 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom"
 import logo from './assets/images/mechanico-white.png'
-
 import { Icon } from "@ricons/utils"
 import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
 import Home from './routes/Home.jsx'
