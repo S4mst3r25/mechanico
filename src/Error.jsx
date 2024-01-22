@@ -1,5 +1,4 @@
-import { Link, useNavigate, useRouteError } from "react-router-dom"
-import logo from './assets/images/mechanico-black.png'
+import { useNavigate } from "react-router-dom"
 
 export default function Error() {
     const navigate = useNavigate()
