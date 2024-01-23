@@ -10,7 +10,7 @@ import Error from 'src/Error.jsx'
 export default function Root() {
   return (
     <>
-      <div className="bg-zinc-800 w-full flex items-center p-6 text-zinc-400 justify-between font-bold fixed top-0">
+      <div className="bg-zinc-800 w-full flex items-center p-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
         <Link to="/"><img src={logo} className="w-[150px] h-max" /></Link>
         <div className="space-x-3 flex">
           <Link to="/library" className="hover:text-zinc-200 transition">
