@@ -1,5 +1,5 @@
-import Card from '../components/Card.jsx'
-import differential from '../assets/images/thumbnails/differential.png'
+import Card from 'src/components/Card.jsx'
+import differential from 'src/assets/images/thumbnails/differential.png'
 
 export default function Library() {
     return (

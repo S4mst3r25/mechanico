@@ -1,11 +1,11 @@
 import { Link, Route, Routes } from "react-router-dom"
-import logo from './assets/images/mechanico-white.png'
+import logo from 'src/assets/images/mechanico-white.png'
 import { Icon } from "@ricons/utils"
 import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
-import Home from './routes/Home.jsx'
-import About from './routes/About.jsx'
-import Library from './routes/Library.jsx'
-import Error from './Error.jsx'
+import Home from 'src/routes/Home.jsx'
+import About from 'src/routes/About.jsx'
+import Library from 'src/routes/Library.jsx'
+import Error from 'src/Error.jsx'
 
 export default function Root() {
   return (

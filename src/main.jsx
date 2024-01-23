@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Root from './Root.jsx'
-import './assets/css/input.css'
+import Root from 'src/Root.jsx'
+import 'src/assets/css/input.css'
 import { BrowserRouter } from "react-router-dom"
 
 
