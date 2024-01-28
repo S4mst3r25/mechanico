@@ -1,5 +1,3 @@
-import 'src/assets/css/main.css'
-
 export default function Card({ img, name }) {
     return (
         <>
