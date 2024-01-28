@@ -13,6 +13,7 @@ export default function Root() {
       <div className="bg-zinc-800 w-full flex items-center p-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
         <Link to="/"><img src={logo} className="w-[150px] h-max" /></Link>
         <div className="space-x-3 flex">
+
           <Link to="/library" className="hover:text-zinc-200 transition">
             <span className="flex items-center">
               <Icon size="20px">
@@ -21,6 +22,7 @@ export default function Root() {
               <p>Library</p>
             </span>
           </Link>
+
           <Link to="/about" className="hover:text-zinc-200 transition">
             <span className="flex items-center">
               <Icon size="20px">
@@ -29,6 +31,7 @@ export default function Root() {
               <p>About</p>
             </span>
           </Link>
+          
         </div>
       </div>
       <Routes>
