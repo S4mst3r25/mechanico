@@ -1,0 +1,9 @@
+{
+    "models": [
+        {
+            "id": "differential",
+            "path": "/differential.glb",
+            "name": "Car differential"
+        }
+    ]
+}

@@ -6,6 +6,7 @@ import Home from 'src/routes/Home.jsx'
 import About from 'src/routes/About.jsx'
 import Library from 'src/routes/Library.jsx'
 import Error from 'src/Error.jsx'
+import ModelView from "src/routes/ModelView"
 
 export default function Root() {
   return (
@@ -39,6 +40,7 @@ export default function Root() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/library" element={<Library />} />
+        <Route path="/library/:id" element={<ModelView />} />
       </Routes>
     </>
   )
