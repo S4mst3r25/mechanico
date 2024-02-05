@@ -2,7 +2,6 @@ import { Canvas, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense } from "react";
 import { Environment, OrbitControls } from '@react-three/drei';
-import { Color } from 'three';
 
 export default function Viewer({ modelPath }) {
     const gltf = useLoader(GLTFLoader, modelPath)
