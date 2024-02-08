@@ -1,17 +1,30 @@
-import { Canvas, useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { Suspense } from "react";
-import { Environment, OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber'
+import { Suspense, useEffect } from "react"
+import { Environment, OrbitControls, useAnimations, useGLTF } from '@react-three/drei'
 
-export default function Viewer({ modelPath }) {
-    const gltf = useLoader(GLTFLoader, modelPath)
+function Model({ path }) {
+    const { scene, animations } = useGLTF(path)
+    const { actions, names } = useAnimations(animations, scene)
+   
+    useEffect(() => {
+        actions[names[0]].play()
+    }, [])
 
     return (
         <>
-            <div class="w-[1000px] h-[700px] bg-gray-600">
+            <primitive object={scene} />
+        </>
+    )
+}
+
+export default function Viewer({ modelPath }) {
+
+    return (
+        <>
+            <div className="size-full bg-gray-600">
                 <Canvas camera={{ fov: 35, zoom: 5, near: 1, far: 1000 }}>
                     <Suspense fallback={null}>
-                        <primitive object={gltf.scene} />
+                        <Model path={modelPath} />
                     </Suspense>
                     <Environment preset="sunset" />
                     <OrbitControls />
