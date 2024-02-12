@@ -1,6 +1,6 @@
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Suspense, useEffect, useRef } from "react"
-import { OrbitControls, Stats, useAnimations, useGLTF } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Suspense, useEffect } from "react"
+import { Html, OrbitControls, Stats, useAnimations, useGLTF, useProgress } from '@react-three/drei'
 
 function Model({ path }) {
     const { scene, animations } = useGLTF(path)
@@ -17,13 +17,22 @@ function Model({ path }) {
     )
 }
 
+function Loader(){
+    const { progress } = useProgress();
+    return (
+        <>
+        <Html center className="font-bold text-2xl text-white whitespace-nowrap">Loading: {progress} %</Html>
+        </>
+    )
+}
+
 export default function Viewer({ modelPath }) {
 
     return (
         <>
-            <div className="w-full h-[100vh] bg-zinc-400">
+            <div className="w-full h-[100vh] bg-zinc-600">
                 <Canvas camera={{ fov: 35, zoom: 5, near: 1, far: 1000 }}>
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<Loader/>}>
                         <Model path={modelPath} />
                     </Suspense>
                     <ambientLight />
