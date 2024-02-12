@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useEffect } from "react"
-import { Html, OrbitControls, Stats, useAnimations, useGLTF, useProgress } from '@react-three/drei'
+import { Grid, Html, OrbitControls, useAnimations, useGLTF, useProgress } from '@react-three/drei'
 
 function Model({ path }) {
     const { scene, animations } = useGLTF(path)
@@ -37,6 +37,8 @@ export default function Viewer({ modelPath }) {
                     </Suspense>
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
+                    <Grid args={[5,5]}/>
+                    <axesHelper args={[5]}/>
                     <OrbitControls />
                 </Canvas>
             </div>
