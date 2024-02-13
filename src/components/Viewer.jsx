@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useEffect } from "react"
-import { Center, Grid, Html, OrbitControls, useAnimations, useGLTF, useProgress } from '@react-three/drei'
+import { Center, Html, OrbitControls, useAnimations, useGLTF, useProgress } from '@react-three/drei'
 
 function Model({ path }) {
     const { scene, animations } = useGLTF(path)
@@ -30,7 +30,6 @@ function Loader() {
 }
 
 export default function Viewer({ modelPath }) {
-
     return (
         <>
             <div className="w-full h-[100vh] bg-zinc-600">
@@ -41,7 +40,6 @@ export default function Viewer({ modelPath }) {
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
                     <OrbitControls makeDefault={true} />
-
                 </Canvas>
             </div>
 
