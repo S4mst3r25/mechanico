@@ -19,7 +19,6 @@ export default function ModelView() {
 
     return (
         <>
-            <h1 className="text-center mt-[130px] font-bold text-4xl">{modelName}</h1>
             <Viewer modelPath={modelPath} />
         </>
     )
