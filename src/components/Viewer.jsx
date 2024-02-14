@@ -1,6 +1,6 @@
-import { Canvas, useThree } from '@react-three/fiber'
+import { Canvas, useThree } from "@react-three/fiber"
 import { Suspense, useEffect, useState } from "react"
-import { Center, Html, OrbitControls, useAnimations, useGLTF, useProgress } from '@react-three/drei'
+import { Center, Html, OrbitControls, useAnimations, useGLTF, useProgress } from "@react-three/drei"
 import ReactSlider from "react-slider"
 
 function Model({ path, playbackSpeed }) {
@@ -35,15 +35,15 @@ function Loader() {
 }
 
 export default function Viewer({ modelPath }) {
-    const [playbackSpeedValue, setPlaybackSpeedValue] = useState(1)
+    const [playbackSpeedValue, setPlaybackSpeedValue] = useState(0.5)
 
     return (
         <>
-            <div className='top-[100px] left-[20px] absolute'>
-                <h1 className='font-bold text-xl text-white whitespace-nowrap'>Playback speed</h1>
+            <div className="top-[100px] right-[20px] absolute">
+                <h1 className="font-bold text-xl text-white whitespace-nowrap">Playback speed</h1>
                 <ReactSlider
-                    className='top-[8px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg'
-                    thumbClassName='top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg'
+                    className="top-[8px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg"
+                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg"
                     min={0}
                     max={100}
                     value={playbackSpeedValue * 100}
