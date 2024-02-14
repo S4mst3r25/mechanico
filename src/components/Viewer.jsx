@@ -9,10 +9,10 @@ function Model({ path }) {
 
     const state = useThree()
 
-    state.camera.position.set(1,3,2)
+    state.camera.position.set(1, 3, 2)
 
     useEffect(() => {
-        actions[names[0]].play()
+        actions[names[0]].setEffectiveTimeScale(0.4).play()
     }, [])
 
     return (
@@ -37,8 +37,16 @@ function Loader() {
 export default function Viewer({ modelPath }) {
     return (
         <>
+            <div>
+                <ReactSlider
+                    className='left-[20px] top-[100px] absolute z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg'
+                    trackClassName=''
+                    thumbClassName='top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg'
+                    min={0}
+                    max={100}
+                />
+            </div>
             <div className="w-full h-[100vh] bg-zinc-600">
-                <ReactSlider/>
                 <Canvas>
                     <Suspense fallback={<Loader />}>
                         <Model path={modelPath} />
