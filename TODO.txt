@@ -4,7 +4,6 @@ fix card size (not image dependent)
 
 fix - setting playback speed (slider) resets camera view
 fix model colors
-make about page
 add thumbnail to json file
 add information text to model parts
 
