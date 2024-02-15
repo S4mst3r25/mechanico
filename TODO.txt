@@ -1,6 +1,5 @@
 make animations longer (5s)
 add model controls panel (animation playback/speed etc.)
-fix card size (not image dependent)
 
 fix - setting playback speed (slider) resets camera view
 fix model colors
