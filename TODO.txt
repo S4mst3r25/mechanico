@@ -7,3 +7,5 @@ fix model colors
 make about page
 add thumbnail to json file
 add information text to model parts
+
+isolate logic & restructure code for readability & performance
