@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom"
 import logo from 'src/assets/images/mechanico-white.png'
 import { Icon } from "@ricons/utils"
 import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
+import { Github } from "@ricons/fa"
 import Home from 'src/routes/Home.jsx'
 import About from 'src/routes/About.jsx'
 import Library from 'src/routes/Library.jsx'
@@ -13,7 +14,7 @@ export default function Root() {
     <>
       <div className="bg-zinc-800 w-full flex items-center p-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
         <Link to="/"><img src={logo} className="w-[150px] h-max" /></Link>
-        <div className="space-x-3 flex">
+        <div className="space-x-4 flex">
 
           <Link to="/library" className="hover:text-zinc-200 transition">
             <span className="flex items-center">
@@ -25,14 +26,23 @@ export default function Root() {
           </Link>
 
           <Link to="/about" className="hover:text-zinc-200 transition">
-            <span className="flex items-center">
+            <span className="flex items-center space-x-[1px]">
               <Icon size="20px">
                 <Info20Filled />
               </Icon>
               <p>About</p>
             </span>
           </Link>
-          
+
+          <Link to="https://github.com/S4mst3r25/mechanico" className="hover:text-zinc-200 transition">
+            <span className="flex items-center space-x-[3px]">
+              <Icon size="20px">
+                <Github />
+              </Icon>
+              <p>GitHub</p>
+            </span>
+          </Link>
+
         </div>
       </div>
       <Routes>
