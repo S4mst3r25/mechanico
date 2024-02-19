@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { Link, NavLink, Route, Routes } from "react-router-dom"
 import logo from 'src/assets/images/mechanico-white.png'
 import { Icon } from "@ricons/utils"
 import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
@@ -16,32 +16,32 @@ export default function Root() {
         <Link to="/"><img src={logo} className="w-[150px] h-max" /></Link>
         <div className="space-x-4 flex">
 
-          <Link to="/library" className="hover:text-zinc-200 transition">
+          <NavLink to="/library" className={({isActive}) => isActive ? "text-zinc-200" : "text-zinc-400 hover:text-zinc-200 transition" }>
             <span className="flex items-center">
               <Icon size="20px">
                 <BookGlobe20Filled />
               </Icon>
               <p>Library</p>
             </span>
-          </Link>
+          </NavLink>
 
-          <Link to="/about" className="hover:text-zinc-200 transition">
+          <NavLink to="/about" className={({isActive}) => isActive ? "text-zinc-200" : "text-zinc-400 hover:text-zinc-200 transition" }>
             <span className="flex items-center space-x-[1px]">
               <Icon size="20px">
                 <Info20Filled />
               </Icon>
               <p>About</p>
             </span>
-          </Link>
+          </NavLink>
 
-          <Link to="https://github.com/S4mst3r25/mechanico" className="hover:text-zinc-200 transition">
+          <a href="https://github.com/S4mst3r25/mechanico" className="hover:text-zinc-200 transition">
             <span className="flex items-center space-x-[3px]">
               <Icon size="20px">
                 <Github />
               </Icon>
               <p>GitHub</p>
             </span>
-          </Link>
+          </a>
 
         </div>
       </div>
