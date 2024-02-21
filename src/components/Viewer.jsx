@@ -9,7 +9,10 @@ function Model({ path, playbackSpeed }) {
 
     const state = useThree()
 
-    state.camera.position.set(1, 3, 2)
+    
+    useEffect(() => {
+        state.camera.position.set(1, 3, 2)
+    }, [])
 
     useEffect(() => {
         actions[names[0]].setEffectiveTimeScale(playbackSpeed).play()
