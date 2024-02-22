@@ -7,7 +7,8 @@ Project Description
 ### Todo
 
 - [ ] Make animations longer ( 5 seconds )  
-- [ ] Bug: Model colors not fully visible  
+- [ ] Bug: Model colors not fully visible
+- [ ] Add more models
 - [ ] Add thumbnails as a part of the models.json file  
 - [ ] Add information text tooltips to model parts  
 - [ ] Code clean-up & restructuring  
