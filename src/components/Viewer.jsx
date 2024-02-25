@@ -2,8 +2,10 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { Suspense, useEffect, useState } from "react"
 import { Center, Html, OrbitControls, useAnimations, useGLTF, useProgress } from "@react-three/drei"
 import ReactSlider from "react-slider"
+import { Play16Filled, Pause16Filled } from "@ricons/fluent"
+import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, callbackProp }) {
+function Model({ path, playbackSpeed, callbackProp, playPauseProp }) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
 
@@ -22,13 +24,19 @@ function Model({ path, playbackSpeed, callbackProp }) {
         callbackProp((elapsedTime / duration) * 100)
     }
 
-    useFrame((state, deltaTime) => {
+    useFrame((state) => {
         const duration = actions[names[0]].getClip().duration
         let elapsedTime = actions[names[0]].time
         callbackFunction(elapsedTime, duration)
 
         if (elapsedTime >= duration) {
             elapsedTime = 0
+        }
+        if (playPauseProp == false) {
+            state.clock.stop()
+        }
+        else {
+            state.clock.start()
         }
     })
 
@@ -54,6 +62,7 @@ function Loader() {
 export default function Viewer({ modelPath }) {
     const [playbackSpeedValue, setPlaybackSpeedValue] = useState(0.5)
     const [elapsedTime, setElapsedTime] = useState(0)
+    const [isPlaying, setIsPlaying] = useState(true)
 
     function handleCallback(value) {
         setElapsedTime(value)
@@ -65,7 +74,7 @@ export default function Viewer({ modelPath }) {
                 <h1 className="font-bold text-xl text-white whitespace-nowrap">Playback speed</h1>
                 <ReactSlider
                     className="top-[5px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg"
+                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
                     min={0}
                     max={100}
                     value={playbackSpeedValue * 100}
@@ -79,11 +88,19 @@ export default function Viewer({ modelPath }) {
                     max={100}
                     value={elapsedTime}
                 />
+                <div className="flex justify-center items-center mt-[5px]">
+                    <Icon size={20} color="rgb(24 24 27)">
+                        <Pause16Filled className="mt-[5px] z-10 cursor-pointer" onClick={() => setIsPlaying(false)} />
+                    </Icon>
+                    <Icon size={20} color="rgb(24 24 27)">
+                        <Play16Filled className="mt-[5px] z-10 cursor-pointer" onClick={() => setIsPlaying(true)} />
+                    </Icon>
+                </div>
             </div>
             <div className="w-full h-[100vh] bg-zinc-600">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
-                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} callbackProp={handleCallback} />
+                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} callbackProp={handleCallback} playPauseProp={isPlaying} />
                     </Suspense>
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
