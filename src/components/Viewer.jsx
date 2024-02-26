@@ -5,7 +5,7 @@ import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, currentAnimationTime, isPlaying}) {
+function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
 
@@ -40,7 +40,7 @@ function Model({ path, playbackSpeed, currentAnimationTime, isPlaying}) {
 }
 
 function Loader() {
-    let { progress } = useProgress();
+    const { progress } = useProgress();
     return (
         <>
             <Html center className="font-bold text-2xl text-white whitespace-nowrap">Loading: {progress} %</Html>
@@ -55,18 +55,16 @@ export default function Viewer({ modelPath }) {
 
     return (
         <>
-            <div className="top-[100px] right-[20px] absolute bg-white z-10 w-[400px] h-[200px] text-center">
-                <div className="bg-zinc-800 p-">
-                    <h1 className="font-bold text-2xl whitespace-nowrap text-white">Control panel</h1>
+            <div className="top-[100px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
+                <div className="bg-zinc-800 p-3">
+                    <h1 className="font-bold text-xl whitespace-nowrap text-white">Controls</h1>
                 </div>
-
-
-                <div className="w-full h-full flex flex-col items-center">
-                    <div className="flex flex-row">
-                        <h1 className="font-bold text-xl whitespace-nowrap">Playback speed</h1>
+                <div className="w-full h-full flex flex-col space-y-1 p-1">
+                    <div className="flex flex-row items-center bg-zinc-200 p-2 space-x-4 pl-3">
+                        <h1 className="text-lg whitespace-nowrap">Playback speed</h1>
                         <ReactSlider
-                            className="top-[5px] w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                            thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
+                            className="w-[150px] h-[8px] bg-zinc-400 rounded-sm flex items-center"
+                            thumbClassName="w-[15px] h-[15px] bg-zinc-900 rounded-sm cursor-pointer"
                             min={0}
                             max={100}
                             value={playbackSpeedValue * 100}
@@ -74,23 +72,22 @@ export default function Viewer({ modelPath }) {
                         />
 
                     </div>
-                    <div className="flex flex-row items-center">
-                        <h1 className="mt-[13px] font-bold text-xl whitespace-nowrap">Animation</h1>
+                    <div className="flex flex-row items-center bg-zinc-200 p-2 space-x-4 pl-3">
+                        <h1 className="text-lg whitespace-nowrap">Animation</h1>
                         <ReactSlider
-                            className="top-[5px] w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                            thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
+                            className="w-[200px] h-[8px] bg-zinc-400 rounded-sm flex items-center"
+                            thumbClassName="bg-zinc-500 w-[10px] h-[15px] bg-zinc-900 rounded-sm cursor-pointer"
                             min={0}
                             max={100}
                             value={elapsedTime}
                         />
 
-                        <button onClick={() => setIsPlaying(!isPlaying)} className="bg-zinc-300 rounded-sm flex items-center h-10 w-10">
+                        <button onClick={() => setIsPlaying(!isPlaying)} className="bg-zinc-300 flex items-center rounded-sm justify-center h-8 w-8 hover:bg-[#b4b4b8] transition">
                             <Icon size={20}>
-                                {isPlaying ? <Pause16Filled className="text-zinc-500" /> : <Play16Filled className="text-zinc-500" />}
+                                {isPlaying ? <Pause16Filled className="text-zinc-500" /> : <Play16Filled className="text-zinc-500 mr-[2px]" />}
                             </Icon>
                         </button>
                     </div>
-
                 </div>
 
             </div>

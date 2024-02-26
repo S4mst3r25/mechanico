@@ -6,9 +6,7 @@ Project Description
 
 ### Todo
 
-- [ ] Loading screen doesnt change value (stays at 0%)  
-- [ ] Make animations longer ( 5 seconds )  
-- [ ] Bug: Model colors not fully visible  
+- [ ] Animation timeline thumb doesnt change animation time  
 - [ ] Add more models  
 - [ ] Add thumbnails as a part of the models.json file  
 - [ ] Add information text tooltips to model parts  
@@ -16,7 +14,8 @@ Project Description
 
 ### In Progress
 
-- [ ] Make control panel UI better  
+- [ ] Make animations longer ( 5 seconds )  
+- [ ] Bug: Model colors not fully visible  
 
 ### Done ✓
 
