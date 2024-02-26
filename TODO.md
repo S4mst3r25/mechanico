@@ -5,7 +5,7 @@ Project Description
 <em>[TODO.md spec & Kanban Board](https://bit.ly/3fCwKfM)</em>
 
 ### Todo
-
+- [ ] Add 3d object/s to homepage for decoration & improve overall look
 - [ ] Animation timeline thumb doesnt change animation time  
 - [ ] Add more models  
 - [ ] Add thumbnails as a part of the models.json file  
