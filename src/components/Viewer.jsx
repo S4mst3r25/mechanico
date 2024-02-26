@@ -55,7 +55,7 @@ export default function Viewer({ modelPath }) {
 
     return (
         <>
-            <div className="top-[100px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
+            <div className="top-[94px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
                 <div className="bg-zinc-800 p-3">
                     <h1 className="font-bold text-xl whitespace-nowrap text-white">Controls</h1>
                 </div>
