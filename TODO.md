@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Loading screen doesnt change value (stays at 0%)  
 - [ ] Make animations longer ( 5 seconds )  
 - [ ] Bug: Model colors not fully visible  
 - [ ] Add more models  
@@ -15,7 +16,7 @@ Project Description
 
 ### In Progress
 
-- [ ] Make control panel UI better
+- [ ] Make control panel UI better  
 
 ### Done ✓
 

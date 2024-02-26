@@ -5,10 +5,11 @@ import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
+function Model({ path, playbackSpeed, currentAnimationTime, isPlaying}) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
-    const duration = actions[names[0]].getClip().duration
+
+    const animationDuration = actions[names[0]].getClip().duration
 
     const state = useThree()
 
@@ -22,15 +23,10 @@ function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
     }, [playbackSpeed])
 
     useFrame((state) => {
-        let elapsedTime = actions[names[0]].time
-        currentAnimationTime((elapsedTime / duration) * 100)
+        const elapsedTime = actions[names[0]].time
+        currentAnimationTime((elapsedTime / animationDuration) * 100)
 
-        if (isPlaying == false) {
-            state.clock.stop()
-        }
-        else {
-            state.clock.start()
-        }
+        isPlaying ? state.clock.start() : state.clock.stop()
     })
 
     return (
@@ -44,7 +40,7 @@ function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
 }
 
 function Loader() {
-    const { progress } = useProgress();
+    let { progress } = useProgress();
     return (
         <>
             <Html center className="font-bold text-2xl text-white whitespace-nowrap">Loading: {progress} %</Html>
