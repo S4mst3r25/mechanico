@@ -59,34 +59,46 @@ export default function Viewer({ modelPath }) {
 
     return (
         <>
-            <div className="top-[100px] right-[20px] absolute">
-                <h1 className="font-bold text-xl text-white whitespace-nowrap">Playback speed</h1>
-                <ReactSlider
-                    className="top-[5px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
-                    min={0}
-                    max={100}
-                    value={playbackSpeedValue * 100}
-                    onChange={(playbackSpeedValue) => setPlaybackSpeedValue(playbackSpeedValue / 100)}
-                />
-                <h1 className="mt-[13px] font-bold text-xl text-white whitespace-nowrap">Animation</h1>
-                <ReactSlider
-                    className="top-[5px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
-                    min={0}
-                    max={100}
-                    value={elapsedTime}
-                />
-                <div className="flex justify-center items-center mt-[5px]">
-                    <Icon size={20} color="rgb(24 24 27)">
-                        <Pause16Filled className="mt-[5px] z-10 cursor-pointer" onClick={() => setIsPlaying(false)} />
-                    </Icon>
-                    <Icon size={20} color="rgb(24 24 27)">
-                        <Play16Filled className="mt-[5px] z-10 cursor-pointer" onClick={() => setIsPlaying(true)} />
-                    </Icon>
+            <div className="top-[100px] right-[20px] absolute bg-white z-10 w-[400px] h-[200px] text-center">
+                <div className="bg-zinc-800 p-">
+                    <h1 className="font-bold text-2xl whitespace-nowrap text-white">Control panel</h1>
                 </div>
+
+
+                <div className="w-full h-full flex flex-col items-center">
+                    <div className="flex flex-row">
+                        <h1 className="font-bold text-xl whitespace-nowrap">Playback speed</h1>
+                        <ReactSlider
+                            className="top-[5px] w-[150px] h-[10px] bg-zinc-700 rounded-lg"
+                            thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
+                            min={0}
+                            max={100}
+                            value={playbackSpeedValue * 100}
+                            onChange={(playbackSpeedValue) => setPlaybackSpeedValue(playbackSpeedValue / 100)}
+                        />
+
+                    </div>
+                    <div className="flex flex-row items-center">
+                        <h1 className="mt-[13px] font-bold text-xl whitespace-nowrap">Animation</h1>
+                        <ReactSlider
+                            className="top-[5px] w-[150px] h-[10px] bg-zinc-700 rounded-lg"
+                            thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
+                            min={0}
+                            max={100}
+                            value={elapsedTime}
+                        />
+
+                        <button onClick={() => setIsPlaying(!isPlaying)} className="bg-zinc-300 rounded-sm flex items-center h-10 w-10">
+                            <Icon size={20}>
+                                {isPlaying ? <Pause16Filled className="text-zinc-500" /> : <Play16Filled className="text-zinc-500" />}
+                            </Icon>
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
-            <div className="w-full h-[100vh] bg-zinc-600">
+            <div className="w-full h-[100vh] bg-zinc-500">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
                         <Model path={modelPath} playbackSpeed={playbackSpeedValue} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} />
