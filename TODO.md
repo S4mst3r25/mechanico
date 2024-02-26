@@ -15,7 +15,7 @@ Project Description
 
 ### In Progress
 
-- [ ] Add controls panel ( Playback speed, Animation time etc.)  
+- [ ] Make control panel UI better
 
 ### Done ✓
 
