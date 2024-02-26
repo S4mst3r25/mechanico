@@ -5,9 +5,10 @@ import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, callbackProp, playPauseProp }) {
+function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
+    const duration = actions[names[0]].getClip().duration
 
     const state = useThree()
 
@@ -20,19 +21,11 @@ function Model({ path, playbackSpeed, callbackProp, playPauseProp }) {
         actions[names[0]].setEffectiveTimeScale(playbackSpeed).play()
     }, [playbackSpeed])
 
-    function callbackFunction(elapsedTime, duration) {
-        callbackProp((elapsedTime / duration) * 100)
-    }
-
     useFrame((state) => {
-        const duration = actions[names[0]].getClip().duration
         let elapsedTime = actions[names[0]].time
-        callbackFunction(elapsedTime, duration)
+        currentAnimationTime((elapsedTime / duration) * 100)
 
-        if (elapsedTime >= duration) {
-            elapsedTime = 0
-        }
-        if (playPauseProp == false) {
+        if (isPlaying == false) {
             state.clock.stop()
         }
         else {
@@ -64,10 +57,6 @@ export default function Viewer({ modelPath }) {
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
 
-    function handleCallback(value) {
-        setElapsedTime(value)
-    }
-
     return (
         <>
             <div className="top-[100px] right-[20px] absolute">
@@ -80,10 +69,10 @@ export default function Viewer({ modelPath }) {
                     value={playbackSpeedValue * 100}
                     onChange={(playbackSpeedValue) => setPlaybackSpeedValue(playbackSpeedValue / 100)}
                 />
-                <h1 className="mt-[13px] font-bold text-xl text-white whitespace-nowrap">Elapsed time</h1>
+                <h1 className="mt-[13px] font-bold text-xl text-white whitespace-nowrap">Animation</h1>
                 <ReactSlider
                     className="top-[5px] z-10 w-[150px] h-[10px] bg-zinc-700 rounded-lg"
-                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg"
+                    thumbClassName="top-[-2.5px] w-[15px] h-[15px] bg-zinc-900 rounded-lg cursor-pointer"
                     min={0}
                     max={100}
                     value={elapsedTime}
@@ -100,7 +89,7 @@ export default function Viewer({ modelPath }) {
             <div className="w-full h-[100vh] bg-zinc-600">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
-                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} callbackProp={handleCallback} playPauseProp={isPlaying} />
+                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} />
                     </Suspense>
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
