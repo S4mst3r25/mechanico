@@ -6,7 +6,9 @@ Project Description
 
 ### Todo
 - [ ] Add 3d object/s to homepage for decoration & improve overall look
-- [ ] Animation timeline thumb doesnt change animation time  
+- [ ] Animation timeline thumb doesnt change animation time
+- [ ] Display mechanism name somewhere in ModelView/Viewer
+- [ ] Throw not found error if model id parameter is wrong  
 - [ ] Add more models  
 - [ ] Add thumbnails as a part of the models.json file  
 - [ ] Add information text tooltips to model parts  
