@@ -5,7 +5,7 @@ import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
+function Model({ path, playbackSpeed, currentAnimationTime, isPlaying, setCurrentAnimationTime }) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
 
@@ -21,6 +21,10 @@ function Model({ path, playbackSpeed, currentAnimationTime, isPlaying }) {
     useEffect(() => {
         actions[names[0]].setEffectiveTimeScale(playbackSpeed).play()
     }, [playbackSpeed])
+
+    useEffect(()=>{
+        actions[names[0]].time = (setCurrentAnimationTime / 100) * animationDuration
+    },[setCurrentAnimationTime])
 
     useFrame((state) => {
         const elapsedTime = actions[names[0]].time
@@ -52,6 +56,7 @@ export default function Viewer({ modelPath }) {
     const [playbackSpeedValue, setPlaybackSpeedValue] = useState(0.5)
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
+    const [animationTimeValue, setAnimationTimeValue] = useState(0)
 
     return (
         <>
@@ -80,6 +85,7 @@ export default function Viewer({ modelPath }) {
                             min={0}
                             max={100}
                             value={elapsedTime}
+                            onChange={(animationTimeValue) => setAnimationTimeValue(animationTimeValue)}
                         />
 
                         <button onClick={() => setIsPlaying(!isPlaying)} className="bg-zinc-300 flex items-center rounded-sm justify-center h-8 w-8 hover:bg-[#b4b4b8] transition">
@@ -94,7 +100,7 @@ export default function Viewer({ modelPath }) {
             <div className="w-full h-[100vh] bg-zinc-500">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
-                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} />
+                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTimeValue}/>
                     </Suspense>
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
