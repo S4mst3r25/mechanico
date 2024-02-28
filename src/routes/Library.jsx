@@ -1,6 +1,7 @@
 import Card from 'src/components/Card.jsx'
 import differential from 'src/assets/images/thumbnails/differential.png'
 import engine from 'src/assets/images/thumbnails/engine.png'
+import rootsblower from 'src/assets/images/thumbnails/rootsblower.png'
 
 export default function Library() {
     return (
@@ -10,6 +11,7 @@ export default function Library() {
                 <div className="flex flex-wrap mt-16 gap-4 justify-center">
                     <Card img={differential} name="Differential" modelId="differential"/>
                     <Card img={engine} name="Engine" modelId="engine"/>
+                    <Card img={rootsblower} name="Roots blower" modelId="rootsblower"/>
                 </div>
             </div>
         </>

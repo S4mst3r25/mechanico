@@ -9,6 +9,12 @@
             "id": "engine",
             "path": "/engine.glb",
             "name": "Four cylinder inline engine"
+        },
+        {
+            "id": "rootsblower",
+            "path": "/roots-blower.glb",
+            "name": "Roots blower"
         }
+        
     ]
 }
