@@ -6,7 +6,6 @@ Project Description
 
 ### Todo
 
-- [ ] Create better lighting setup  
 - [ ] Add 3d object/s to homepage for decoration & improve overall look  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
 - [ ] Add thumbnails as a part of the models.json file  
@@ -16,7 +15,8 @@ Project Description
 
 ### In Progress
 
-- [ ] Compress images / improve image load times 
+- [ ] Compress images / improve image load times
+- [ ] Create better lighting setup  
 
 ### Done ✓
 
