@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Add section view feature  
 - [ ] Add 3d object/s to homepage for decoration & improve overall look  
 - [ ] Create better lighting setup  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
