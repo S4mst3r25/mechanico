@@ -4,6 +4,11 @@
             "id": "differential",
             "path": "/differential.glb",
             "name": "Car differential"
+        },
+        {
+            "id": "engine",
+            "path": "/engine.glb",
+            "name": "Four cylinder inline engine"
         }
     ]
 }
