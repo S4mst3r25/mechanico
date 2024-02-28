@@ -46,7 +46,7 @@ export default function Root() {
         </div>
       </div>
       <Routes>
-        //TODO: errorEelement should be removed. Find root cause.
+        //TODO: errorElement should be removed. Find root cause.
         <Route path="*" element={<Error />} errorElement={<Error/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
