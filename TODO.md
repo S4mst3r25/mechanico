@@ -17,6 +17,7 @@ Project Description
 ### In Progress
 
 - [ ] Create better lighting setup  
+- [ ] Compress images / improve image load times  
 
 ### Done ✓
 
