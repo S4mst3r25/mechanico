@@ -46,7 +46,7 @@ export default function Root() {
         </div>
       </div>
       <Routes>
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} errorElement={<Error/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/library" element={<Library />} />

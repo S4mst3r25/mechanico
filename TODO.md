@@ -16,8 +16,7 @@ Project Description
 
 ### In Progress
 
-- [ ] Compress images / improve image load times  
-- [ ] Throw not found error if model id parameter is wrong  
+- [ ] Compress images / improve image load times 
 
 ### Done ✓
 

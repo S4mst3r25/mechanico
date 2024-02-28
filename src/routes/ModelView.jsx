@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom"
 import Viewer from "src/components/Viewer"
 import modelsJson from "src/models.json"
+import Error from "src/Error"
+import { useState } from "react"
 
 export default function ModelView() {
     const { id } = useParams()
+    let foundModel = false
 
     const models = modelsJson.models
 
@@ -14,12 +17,13 @@ export default function ModelView() {
         if (models[i].id == id) {
             modelName = models[i].name
             modelPath = models[i].path
+            foundModel = true
         }
     }
 
     return (
         <>
-            <Viewer modelPath={modelPath} />
+           {foundModel ? <Viewer modelPath={modelPath} /> : <Error/>} 
         </>
     )
 }
