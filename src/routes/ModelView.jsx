@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom"
 import Viewer from "src/components/Viewer"
 import modelsJson from "src/models.json"
 import Error from "src/Error"
-import { useState } from "react"
 
 export default function ModelView() {
     const { id } = useParams()
