@@ -53,10 +53,10 @@ function Loader() {
 }
 
 export default function Viewer({ modelPath }) {
-    const [playbackSpeedValue, setPlaybackSpeedValue] = useState(0.5)
+    const [playbackSpeed, setPlaybackSpeed] = useState(0.5)
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
-    const [animationTimeValue, setAnimationTimeValue] = useState(0)
+    const [animationTime, setAnimationTime] = useState(0)
 
     return (
         <>
@@ -72,8 +72,8 @@ export default function Viewer({ modelPath }) {
                             thumbClassName="w-[15px] h-[15px] bg-zinc-900 rounded-sm cursor-pointer"
                             min={0}
                             max={100}
-                            value={playbackSpeedValue * 100}
-                            onChange={(playbackSpeedValue) => setPlaybackSpeedValue(playbackSpeedValue / 100)}
+                            value={playbackSpeed * 100}
+                            onChange={(playbackSpeed) => setPlaybackSpeed(playbackSpeed / 100)}
                         />
 
                     </div>
@@ -85,7 +85,7 @@ export default function Viewer({ modelPath }) {
                             min={0}
                             max={100}
                             value={elapsedTime}
-                            onChange={(animationTimeValue) => setAnimationTimeValue(animationTimeValue)}
+                            onChange={(animationTime) => setAnimationTime(animationTime)}
                         />
 
                         <button onClick={() => setIsPlaying(!isPlaying)} className="bg-zinc-300 flex items-center rounded-sm justify-center h-8 w-8 hover:bg-[#b4b4b8] transition">
@@ -100,7 +100,7 @@ export default function Viewer({ modelPath }) {
             <div className="w-full h-[100vh] bg-zinc-500">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
-                        <Model path={modelPath} playbackSpeed={playbackSpeedValue} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTimeValue}/>
+                        <Model path={modelPath} playbackSpeed={playbackSpeed} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTime}/>
                     </Suspense>
                     <ambientLight />
                     <directionalLight position={[1, 20, 1]} />
