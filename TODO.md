@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Make Github repo public & add install instructions to readme.md  
 - [ ] Add 3d object/s to homepage for decoration & improve overall look  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
 - [ ] Add thumbnails as a part of the models.json file  
@@ -19,4 +20,5 @@ Project Description
 
 ### Done ✓
 
+- [x] Make Github repo public &  
 
