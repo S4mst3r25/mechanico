@@ -6,7 +6,7 @@ Project Description
 
 ### Todo
 
-- [ ] Display mechanism name somewhere in ModelView/Viewer  
+
 - [ ] Add thumbnails as a part of the models.json file  
 - [ ] Add section view feature  
 - [ ] Add information text tooltips to model parts  
@@ -14,7 +14,8 @@ Project Description
 
 ### In Progress
 
-- [ ] Add 3d object/s to homepage for decoration & improve overall look  
+
+ - [ ] Display mechanism name somewhere in ModelView/Viewer  
 
 ### Done ✓
 
