@@ -14,6 +14,11 @@
             "id": "rootsblower",
             "path": "/roots-blower.glb",
             "name": "Roots blower"
+        },
+        {
+            "id": "wankelengine",
+            "path": "/wankel.glb",
+            "name": "Wankel engine"
         }
         
     ]

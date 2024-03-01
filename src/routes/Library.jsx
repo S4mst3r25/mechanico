@@ -2,6 +2,7 @@ import Card from 'src/components/Card.jsx'
 import differential from 'src/assets/images/thumbnails/differential.png'
 import engine from 'src/assets/images/thumbnails/engine.png'
 import rootsblower from 'src/assets/images/thumbnails/rootsblower.png'
+import wankel from 'src/assets/images/thumbnails/wankel.png'
 
 export default function Library() {
     return (
@@ -12,6 +13,7 @@ export default function Library() {
                     <Card img={differential} name="Differential" modelId="differential"/>
                     <Card img={engine} name="Engine" modelId="engine"/>
                     <Card img={rootsblower} name="Roots blower" modelId="rootsblower"/>
+                    <Card img={wankel} name="Wankel engine" modelId="wankelengine"/>
                 </div>
             </div>
         </>
