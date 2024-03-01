@@ -24,7 +24,11 @@
             "id": "roboticgripper",
             "path": "/gripper.glb",
             "name": "Robotic arm gripper"
+        },
+        {
+            "id": "doublewishbonesuspension",
+            "path": "/double-wishbone-suspension.glb",
+            "name": "Double wishbone suspension"
         }
-        
     ]
 }

@@ -4,6 +4,7 @@ import engine from 'src/assets/images/thumbnails/engine.png'
 import rootsblower from 'src/assets/images/thumbnails/rootsblower.png'
 import wankel from 'src/assets/images/thumbnails/wankel.png'
 import gripper from 'src/assets/images/thumbnails/gripper.png'
+import suspension from 'src/assets/images/thumbnails/suspension.png'
 
 export default function Library() {
     return (
@@ -16,6 +17,7 @@ export default function Library() {
                     <Card img={rootsblower} name="Roots blower" modelId="rootsblower"/>
                     <Card img={wankel} name="Wankel engine" modelId="wankelengine"/>
                     <Card img={gripper} name="Robotic arm gripper" modelId="roboticgripper"/>
+                    <Card img={suspension} name="Double wishbone suspension" modelId="doublewishbonesuspension"/>
                 </div>
             </div>
         </>
