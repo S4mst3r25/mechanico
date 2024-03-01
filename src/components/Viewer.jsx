@@ -102,7 +102,7 @@ export default function Viewer({ modelPath }) {
                     <Suspense fallback={<Loader />}>
                         <Model path={modelPath} playbackSpeed={playbackSpeed} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTime}/>
                     </Suspense>
-                    <ambientLight />
+                    <ambientLight  intensity={0.7}/>
                     <directionalLight position={[1, 20, 1]} />
                     <OrbitControls />
                 </Canvas>

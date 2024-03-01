@@ -14,7 +14,6 @@ Project Description
 
 ### In Progress
 
-- [ ] Create better lighting setup  
 - [ ] Add 3d object/s to homepage for decoration & improve overall look  
 
 ### Done ✓
