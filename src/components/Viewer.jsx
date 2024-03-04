@@ -5,17 +5,16 @@ import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
 
-function Model({ path, playbackSpeed, currentAnimationTime, isPlaying, setCurrentAnimationTime }) {
+function Model({ path, playbackSpeed, setCurrentAnimationTime, isPlaying, currentAnimationTime }) {
     const { scene, animations } = useGLTF(path)
     const { actions, names } = useAnimations(animations, scene)
 
     const animationDuration = actions[names[0]].getClip().duration
-
-    const state = useThree()
-
+    
+    const { camera, clock } = useThree()
 
     useEffect(() => {
-        state.camera.position.set(1, 3, 2)
+        camera.position.set(1, 3, 2)
     }, [])
 
     useEffect(() => {
@@ -26,11 +25,11 @@ function Model({ path, playbackSpeed, currentAnimationTime, isPlaying, setCurren
         actions[names[0]].time = (setCurrentAnimationTime / 100) * animationDuration
     },[setCurrentAnimationTime])
 
-    useFrame((state) => {
+    useFrame(() => {
         const elapsedTime = actions[names[0]].time
         currentAnimationTime((elapsedTime / animationDuration) * 100)
 
-        isPlaying ? state.clock.start() : state.clock.stop()
+        isPlaying ? clock.start() : clock.stop()
     })
 
     return (
