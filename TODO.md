@@ -6,7 +6,6 @@ Project Description
 
 ### Todo
 
-- [ ] Add other languages support (Bulgarian)  
 - [ ] Add section view feature  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
 - [ ] Add thumbnails as a part of the models.json file  
@@ -15,6 +14,7 @@ Project Description
 
 ### In Progress
 
+- [ ] Add other languages support (Bulgarian)  
 
 ### Done ✓
 
