@@ -6,15 +6,16 @@ Project Description
 
 ### Todo
 
+- [ ] Add Github repo link to documentation  
 - [ ] Add section view feature  
+- [ ] Add other languages support (Bulgarian)  
+- [ ] Add information text tooltips to model parts  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
 - [ ] Add thumbnails as a part of the models.json file  
-- [ ] Add information text tooltips to model parts  
 - [ ] Code clean-up & restructuring  
 
 ### In Progress
 
-- [ ] Add other languages support (Bulgarian)  
 
 ### Done ✓
 
