@@ -7,8 +7,9 @@ Project Description
 ### Todo
 
 - [ ] Add Github repo link to documentation  
-- [ ] Add section view feature  
 - [ ] Add other languages support (Bulgarian)  
+- [ ] Add a search bar that can search the library for models  
+- [ ] Add section view feature  
 - [ ] Add information text tooltips to model parts  
 - [ ] Display mechanism name somewhere in ModelView/Viewer  
 - [ ] Add thumbnails as a part of the models.json file  
