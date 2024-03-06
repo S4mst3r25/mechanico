@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Update presentation with newer images & additional content  
 - [ ] Add Github repo link to documentation  
 - [ ] Add other languages support (Bulgarian)  
 - [ ] Add a search bar that can search the library for models  
