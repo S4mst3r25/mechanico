@@ -1,7 +1,7 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom"
 import logo from 'src/assets/images/mechanico-white.png'
 import { Icon } from "@ricons/utils"
-import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
+import { Info20Filled, BookGlobe20Filled, ChatMultiple20Filled } from "@ricons/fluent"
 import { Github } from "@ricons/fa"
 import Home from 'src/routes/Home.jsx'
 import About from 'src/routes/About.jsx'
@@ -51,7 +51,7 @@ export default function Root() {
             <a className="hover:text-zinc-200 transition cursor-pointer" onClick={() => { i18n.language == 'bg' ? i18n.changeLanguage('en') : i18n.changeLanguage('bg') }}>
               <span className="flex items-center space-x-[3px]">
                 <Icon size="20px">
-                  <Github />
+                  <ChatMultiple20Filled />
                 </Icon>
                 <p>{t('translateTo')}</p>
               </span>

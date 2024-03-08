@@ -1,0 +1,27 @@
+{
+    "translateTo": "Български",
+    "welcomeMesagge": "Welcome to Mehanico!",
+    "description": "A library of interactive 3D mechanisms.",
+    "libraryButton": "Library",
+    "aboutButton": "About",
+    "aboutUs": "blah blah blah",
+    "getStartedButton": "Get started",
+    "library": {
+        "title": "Models library",
+        "diff": "Differential",
+        "engine": "Engine",
+        "blower": "Roots blower",
+        "wankel": "Wankel engine",
+        "robo-arm": "Robotic arm gripper",
+        "suspension": "Double wishbone suspension"
+    },
+    "viewer": {
+        "controls": "Controls",
+        "speed": "Playback speed",
+        "animation": "Animation"
+    },
+    "about": {
+        "title": "About Mechanico",
+        "description": "Mechanico is a library of interactive 3D models of mechanical contraptions and systems. It's a beginner-friendly platform that helps engineering students, hobbyists and curious people understand mechanical systems better."
+    }
+}

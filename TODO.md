@@ -8,7 +8,6 @@ Project Description
 
 - [ ] Update presentation with newer images & additional content  
 - [ ] Add Github repo link to documentation  
-
 - [ ] Add a search bar that can search the library for models  
 - [ ] Add section view feature  
 - [ ] Add information text tooltips to model parts  
@@ -18,7 +17,7 @@ Project Description
 
 ### In Progress
 
-- [ ] Add other languages support (Bulgarian)  
+
 
 ### Done ✓
 

@@ -4,6 +4,7 @@ import { Center, Html, OrbitControls, useAnimations, useGLTF, useProgress } from
 import ReactSlider from "react-slider"
 import { Play16Filled, Pause16Filled } from "@ricons/fluent"
 import { Icon } from "@ricons/utils"
+import { useTranslation } from "react-i18next"
 
 function Model({ path, playbackSpeed, setCurrentAnimationTime, isPlaying, currentAnimationTime }) {
     const { scene, animations } = useGLTF(path)
@@ -56,16 +57,17 @@ export default function Viewer({ modelPath }) {
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
     const [animationTime, setAnimationTime] = useState(0)
+    const [t] = useTranslation()
 
     return (
         <>
             <div className="top-[94px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
                 <div className="bg-zinc-800 p-3">
-                    <h1 className="font-bold text-xl whitespace-nowrap text-white">Controls</h1>
+                    <h1 className="font-bold text-xl whitespace-nowrap text-white">{t("viewer.controls")}</h1>
                 </div>
                 <div className="w-full h-full flex flex-col space-y-1 p-1">
                     <div className="flex flex-row items-center bg-zinc-200 p-2 space-x-4 pl-3">
-                        <h1 className="text-lg whitespace-nowrap">Playback speed</h1>
+                        <h1 className="text-lg whitespace-nowrap">{t("viewer.speed")}</h1>
                         <ReactSlider
                             className="w-[150px] h-[8px] bg-zinc-400 rounded-sm flex items-center"
                             thumbClassName="w-[15px] h-[15px] bg-zinc-900 rounded-sm cursor-pointer"
@@ -77,7 +79,7 @@ export default function Viewer({ modelPath }) {
 
                     </div>
                     <div className="flex flex-row items-center bg-zinc-200 p-2 space-x-4 pl-3">
-                        <h1 className="text-lg whitespace-nowrap">Animation</h1>
+                        <h1 className="text-lg whitespace-nowrap">{t("viewer.animation")}</h1>
                         <ReactSlider
                             className="w-[200px] h-[8px] bg-zinc-400 rounded-sm flex items-center"
                             thumbClassName="bg-zinc-500 w-[10px] h-[15px] bg-zinc-900 rounded-sm cursor-pointer"
