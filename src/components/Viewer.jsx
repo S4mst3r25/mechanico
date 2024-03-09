@@ -11,7 +11,7 @@ function Model({ path, playbackSpeed, setCurrentAnimationTime, isPlaying, curren
     const { actions, names } = useAnimations(animations, scene)
 
     const animationDuration = actions[names[0]].getClip().duration
-    
+
     const { camera, clock } = useThree()
 
     useEffect(() => {
@@ -22,9 +22,9 @@ function Model({ path, playbackSpeed, setCurrentAnimationTime, isPlaying, curren
         actions[names[0]].setEffectiveTimeScale(playbackSpeed).play()
     }, [playbackSpeed])
 
-    useEffect(()=>{
+    useEffect(() => {
         actions[names[0]].time = (setCurrentAnimationTime / 100) * animationDuration
-    },[setCurrentAnimationTime])
+    }, [setCurrentAnimationTime])
 
     useFrame(() => {
         const elapsedTime = actions[names[0]].time
@@ -57,7 +57,7 @@ export default function Viewer({ modelPath }) {
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
     const [animationTime, setAnimationTime] = useState(0)
-    const [t] = useTranslation()
+    const { t } = useTranslation()
 
     return (
         <>
@@ -101,9 +101,9 @@ export default function Viewer({ modelPath }) {
             <div className="w-full h-[100vh] bg-zinc-500">
                 <Canvas>
                     <Suspense fallback={<Loader />}>
-                        <Model path={modelPath} playbackSpeed={playbackSpeed} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTime}/>
+                        <Model path={modelPath} playbackSpeed={playbackSpeed} currentAnimationTime={setElapsedTime} isPlaying={isPlaying} setCurrentAnimationTime={animationTime} />
                     </Suspense>
-                    <ambientLight  intensity={0.7}/>
+                    <ambientLight intensity={0.7} />
                     <directionalLight position={[1, 20, 1]} />
                     <OrbitControls />
                 </Canvas>

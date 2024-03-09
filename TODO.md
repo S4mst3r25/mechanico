@@ -15,7 +15,6 @@ Project Description
 
 ### In Progress
 
-- [ ] Improve translation UI & code  
 - [ ] Add Github repo link to documentation  
 - [ ] Add info about developers team to about page  
 - [ ] Update presentation with newer images & additional content  

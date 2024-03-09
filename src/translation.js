@@ -4,16 +4,16 @@ import translationBG from "src/assets/translations/translationBG.json"
 import traslationEN from "src/assets/translations/translationEN.json"
 
 export default i18next
-.use(initReactI18next)
-.init({
+  .use(initReactI18next)
+  .init({
     lng: 'en',
     fallbackLng: 'en',
     resources: {
-        en: {
-          translation: traslationEN
-        },
-        bg: {
-            translation: translationBG
-        }
+      en: {
+        translation: traslationEN
+      },
+      bg: {
+        translation: translationBG
       }
-})
+    }
+  })

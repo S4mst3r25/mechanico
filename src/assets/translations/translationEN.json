@@ -1,10 +1,9 @@
 {
-    "translateTo": "Български",
-    "welcomeMesagge": "Welcome to Mehanico!",
-    "description": "A library of interactive 3D mechanisms.",
+    "translateTo": "BG",
+    "welcomeMessage": "Welcome to Mechanico!",
+    "description": "A library of interactive 3D mechanisms",
     "libraryButton": "Library",
     "aboutButton": "About",
-    "aboutUs": "blah blah blah",
     "getStartedButton": "Get started",
     "library": {
         "title": "Models library",

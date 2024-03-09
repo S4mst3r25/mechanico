@@ -1,7 +1,7 @@
 import { Link, NavLink, Route, Routes } from "react-router-dom"
 import logo from 'src/assets/images/mechanico-white.png'
 import { Icon } from "@ricons/utils"
-import { Info20Filled, BookGlobe20Filled, ChatMultiple20Filled } from "@ricons/fluent"
+import { Info20Filled, BookGlobe20Filled } from "@ricons/fluent"
 import { Github } from "@ricons/fa"
 import Home from 'src/routes/Home.jsx'
 import About from 'src/routes/About.jsx'
@@ -10,6 +10,7 @@ import Error from 'src/Error.jsx'
 import ModelView from "src/routes/ModelView"
 import { Suspense } from "react"
 import { useTranslation } from "react-i18next"
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 export default function Root() {
   const [t, i18n] = useTranslation()
@@ -17,13 +18,13 @@ export default function Root() {
   return (
     <>
       <Suspense fallback={null}>
-        <div className="bg-zinc-800 w-full flex items-center p-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
-          <Link to="/"><img src={logo} className="w-[150px] h-max" /></Link>
-          <div className="space-x-4 flex">
+        <div className="bg-zinc-800 w-full flex items-center h-[73px] px-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
+          <Link to="/"><img src={logo} className="w-[150px] h-max mb-[8px]" /></Link>
+          <div className="space-x-5 flex items-center">
 
             <NavLink to="/library" className={({ isActive }) => isActive ? "text-zinc-200" : "text-zinc-400 hover:text-zinc-200 transition"}>
-              <span className="flex items-center">
-                <Icon size="20px">
+              <span className="flex items-center space-x-[1px]">
+                <Icon size="23px">
                   <BookGlobe20Filled />
                 </Icon>
                 <p>{t('libraryButton')}</p>
@@ -31,8 +32,8 @@ export default function Root() {
             </NavLink>
 
             <NavLink to="/about" className={({ isActive }) => isActive ? "text-zinc-200" : "text-zinc-400 hover:text-zinc-200 transition"}>
-              <span className="flex items-center space-x-[1px]">
-                <Icon size="20px">
+              <span className="flex items-center space-x-[2px]">
+                <Icon size="23px">
                   <Info20Filled />
                 </Icon>
                 <p>{t('aboutButton')}</p>
@@ -40,7 +41,7 @@ export default function Root() {
             </NavLink>
 
             <a href="https://github.com/S4mst3r25/mechanico" className="hover:text-zinc-200 transition">
-              <span className="flex items-center space-x-[3px]">
+              <span className="flex items-center space-x-[4px] mr-8">
                 <Icon size="20px">
                   <Github />
                 </Icon>
@@ -48,14 +49,12 @@ export default function Root() {
               </span>
             </a>
 
-            <a className="hover:text-zinc-200 transition cursor-pointer" onClick={() => { i18n.language == 'bg' ? i18n.changeLanguage('en') : i18n.changeLanguage('bg') }}>
+            <button className="hover:text-zinc-200 hover:bg-zinc-700 px-2 py-1 rounded-md transition cursor-pointer" onClick={() => { i18n.language == 'bg' ? i18n.changeLanguage('en') : i18n.changeLanguage('bg') }}>
               <span className="flex items-center space-x-[3px]">
-                <Icon size="20px">
-                  <ChatMultiple20Filled />
-                </Icon>
+                {i18n.language == "bg" ? <span className="fi fi-gb rounded-sm"></span> : <span className="fi fi-bg rounded-sm"></span> }
                 <p>{t('translateTo')}</p>
               </span>
-            </a>
+            </button>
 
           </div>
         </div>
