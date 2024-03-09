@@ -2,32 +2,32 @@
     "models": [
         {
             "id": "differential",
-            "path": "/differential.glb",
+            "path": "/models/differential.glb",
             "name": "Car differential"
         },
         {
             "id": "engine",
-            "path": "/engine.glb",
+            "path": "/models/engine.glb",
             "name": "Four cylinder inline engine"
         },
         {
             "id": "rootsblower",
-            "path": "/roots-blower.glb",
+            "path": "/models/roots-blower.glb",
             "name": "Roots blower"
         },
         {
             "id": "wankelengine",
-            "path": "/wankel.glb",
+            "path": "/models/wankel.glb",
             "name": "Wankel engine"
         },
         {
             "id": "roboticgripper",
-            "path": "/gripper.glb",
+            "path": "/models/gripper.glb",
             "name": "Robotic arm gripper"
         },
         {
             "id": "doublewishbonesuspension",
-            "path": "/double-wishbone-suspension.glb",
+            "path": "/models/double-wishbone-suspension.glb",
             "name": "Double wishbone suspension"
         }
     ]
