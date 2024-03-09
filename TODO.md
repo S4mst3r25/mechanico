@@ -6,8 +6,6 @@ Project Description
 
 ### Todo
 
-- [ ] Update presentation with newer images & additional content  
-- [ ] Add Github repo link to documentation  
 - [ ] Add a search bar that can search the library for models  
 - [ ] Add section view feature  
 - [ ] Add information text tooltips to model parts  
@@ -17,7 +15,10 @@ Project Description
 
 ### In Progress
 
-
+- [ ] Improve translation UI & code  
+- [ ] Add Github repo link to documentation  
+- [ ] Add info about developers team to about page  
+- [ ] Update presentation with newer images & additional content  
 
 ### Done ✓
 
