@@ -17,9 +17,7 @@ Project Description
 
 ### In Progress
 
-- [ ] Add Github repo link to documentation  
 - [ ] Add info about developers team to about page  
-- [ ] Update presentation with newer images & additional content  
 
 ### Done ✓
 
