@@ -6,18 +6,18 @@ Project Description
 
 ### Todo
 
-- [ ] Add a search bar that can search the library for models  
-- [ ] Add section view feature  
-- [ ] Improve site responsiveness for mobile  
+- [ ] Add exploded view feature to Viewer  (IMPORTANT)  
+- [ ] On model part hover - information  window should pop up (feature) (IMPORTANT)  
 - [ ] SEO ?  
-- [ ] Add information text tooltips to model parts  
-- [ ] Display mechanism name somewhere in ModelView/Viewer  
-- [ ] Add thumbnails as a part of the models.json file  
+- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
+- [ ] Add thumbnails as a part of the models.json file (?)  
 - [ ] Code clean-up & restructuring  
 
 ### In Progress
 
-- [ ] Add info about developers team to about page  
+- [ ] Translate about page to BG  
+- [ ] Add a search bar that can search the library for models (IMPORTANT)  
+- [ ] Improve site responsiveness for mobile  
 
 ### Done ✓
 
