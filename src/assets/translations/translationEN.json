@@ -1,5 +1,5 @@
 {
-    "translateTo": "BG",
+    "language": "EN",
     "welcomeMessage": "Welcome to Mechanico!",
     "description": "A library of interactive 3D mechanisms",
     "libraryButton": "Library",

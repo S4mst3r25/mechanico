@@ -10,7 +10,7 @@ import Error from 'src/Error.jsx'
 import ModelView from "src/routes/ModelView"
 import { Suspense } from "react"
 import { useTranslation } from "react-i18next"
-import "/node_modules/flag-icons/css/flag-icons.min.css";
+import "/node_modules/flag-icons/css/flag-icons.min.css"
 
 export default function Root() {
   const [t, i18n] = useTranslation()
@@ -51,8 +51,8 @@ export default function Root() {
 
             <button className="hover:text-zinc-200 hover:bg-zinc-700 px-2 py-1 rounded-md transition cursor-pointer" onClick={() => { i18n.language == 'bg' ? i18n.changeLanguage('en') : i18n.changeLanguage('bg') }}>
               <span className="flex items-center space-x-[3px]">
-                {i18n.language == "bg" ? <span className="fi fi-gb rounded-sm"></span> : <span className="fi fi-bg rounded-sm"></span> }
-                <p>{t('translateTo')}</p>
+                {i18n.language == "bg" ? <span className="fi fi-bg rounded-sm"></span> : <span className="fi fi-gb rounded-sm"></span> }
+                <p>{t('language')}</p>
               </span>
             </button>
 
