@@ -15,9 +15,9 @@ Project Description
 
 ### In Progress
 
-- [ ] Translate about page to BG  
-- [ ] Add a search bar that can search the library for models (IMPORTANT)  
 - [ ] Improve site responsiveness for mobile  
+- [ ] Add Robi's info to about page profile card  
+- [ ] Add a search bar that can search the library for models (IMPORTANT)  
 
 ### Done ✓
 
