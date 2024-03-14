@@ -30,7 +30,7 @@ export default function Root() {
   return (
     <>
       <Suspense fallback={null}>
-        <div className="bg-zinc-800 w-full flex items-center h-[73px] px-6 text-zinc-400 justify-between font-bold fixed top-0 z-20">
+        <div className="bg-zinc-800 w-full flex items-center h-[73px] pl-6 pr-4 text-zinc-400 justify-between font-bold fixed top-0 z-20">
           <Link to="/"><img src={logo} className="w-[150px] h-max mb-[8px]" /></Link>
           <button onClick={() => setShowMenu(!showMenu)} className="sm:hidden border-2 rounded-md border-zinc-400 hover:bg-zinc-700 hover:border-zinc-200 hover:text-zinc-200">
             <span className="flex items-center justify-center p-2">
