@@ -15,7 +15,6 @@ Project Description
 
 ### In Progress
 
-- [ ] Add Robi's info to about page profile card  
 - [ ] Add a search bar that can search the library for models (IMPORTANT)  
 
 ### Done ✓
