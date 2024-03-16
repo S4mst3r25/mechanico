@@ -8,14 +8,22 @@ import suspension from 'src/assets/images/thumbnails/suspension.png'
 import { useTranslation } from 'react-i18next'
 import { Suspense } from 'react'
 
+function LoadingScreen() {
+    return (
+        <>
+            <h1 className="text-2xl text-center mt-32">Loading...</h1>
+        </>
+    )
+}
+
 export default function Library() {
     const [t] = useTranslation()
     return (
         <>
-            <Suspense fallback={null}>
-                <h1 className="font-bold text-3xl mt-36 text-center">{t('library.title')}</h1>
+            <h1 className="font-bold text-3xl mt-36 text-center">{t('library.title')}</h1>
+            <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
-                    <div className="flex flex-wrap mt-16 gap-4 justify-center">
+                    <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
                         <Card img={differential} name={t('library.diff')} modelId="differential" />
                         <Card img={engine} name={t('library.engine')} modelId="engine" />
                         <Card img={rootsblower} name={t('library.blower')} modelId="rootsblower" />

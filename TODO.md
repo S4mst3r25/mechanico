@@ -6,9 +6,7 @@ Project Description
 
 ### Todo
 
-- [ ] Add exploded view feature to Viewer  (IMPORTANT)  
 - [ ] On model part hover - information  window should pop up (feature) (IMPORTANT)  
-- [ ] SEO ?  
 - [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
 - [ ] Add thumbnails as a part of the models.json file (?)  
 - [ ] Code clean-up & restructuring  
@@ -16,6 +14,8 @@ Project Description
 ### In Progress
 
 - [ ] Add a search bar that can search the library for models (IMPORTANT)  
+- [ ] SEO  - Make site crawlable & register in Google  
+- [ ] Add exploded view feature to Viewer  (IMPORTANT)  
 
 ### Done ✓
 
