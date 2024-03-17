@@ -7,12 +7,14 @@
     "getStartedButton": "Get started",
     "library": {
         "title": "Models library",
-        "diff": "Differential",
-        "engine": "Engine",
-        "blower": "Roots blower",
-        "wankel": "Wankel engine",
-        "robo-arm": "Robotic arm gripper",
-        "suspension": "Double wishbone suspension"
+        "models": {
+            "diff": "Differential",
+            "engine": "Engine",
+            "blower": "Roots blower",
+            "wankel": "Wankel engine",
+            "robo-arm": "Robotic arm gripper",
+            "suspension": "Double wishbone suspension"
+        }
     },
     "viewer": {
         "controls": "Controls",
@@ -22,17 +24,17 @@
     "about": {
         "title": "About Mechanico",
         "description": "Mechanico is a library of interactive 3D models of mechanical contraptions and systems. It's a beginner-friendly platform that helps engineering students, hobbyists and curious people understand mechanical systems better.",
-        "team" : {
-            "title" : "Our team",
-            "st" : {
-                "name" : "Samuil Tomov",
-                "role" : "Lead Developer / Code Reviewer",
-                "description" : "Has experience with different JavaScript frameworks & backend technologies. Manages the project workflow."
+        "team": {
+            "title": "Our team",
+            "st": {
+                "name": "Samuil Tomov",
+                "role": "Lead Developer / Code Reviewer",
+                "description": "Has experience with different JavaScript frameworks & backend technologies. Manages the project workflow."
             },
-            "rn" : {
-                "name" : "Roberto Nikolov",
-                "role" : "Developer / 3D Modelling",
-                "description" : "Has experience with React & SolidWorks. Works on app logic & 3D models."
+            "rn": {
+                "name": "Roberto Nikolov",
+                "role": "Developer / 3D Modelling",
+                "description": "Has experience with React & SolidWorks. Works on app logic & 3D models."
             }
         }
     }

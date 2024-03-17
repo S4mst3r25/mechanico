@@ -14,7 +14,7 @@ import "/node_modules/flag-icons/css/flag-icons.min.css"
 import useScreenSize from "./hooks/useScreenSize"
 
 export default function Root() {
-  const [t, i18n] = useTranslation()
+  const { t, i18n } = useTranslation()
   const [showMenu, setShowMenu] = useState(true)
 
   const screenSize = useScreenSize()
