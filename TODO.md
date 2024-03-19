@@ -13,10 +13,8 @@ Project Description
 
 ### In Progress
 
-- [ ] Display message that contains the number of models found with search  
-- [ ] Display "no results found" message when no results are found with search  
-- [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 - [ ] SEO - Make site crawlable & register in Google  
+- [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### Done ✓
 
