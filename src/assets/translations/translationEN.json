@@ -37,5 +37,13 @@
                 "description": "Has experience with React & SolidWorks. Works on app logic & 3D models."
             }
         }
+    },
+    "search": {
+        "placeholder": "Search for mechanisms",
+        "results": {
+            "noResults": "No results found.",
+            "singleResult": "1 result found.",
+            "multiResult": " results found."
+        }
     }
 }

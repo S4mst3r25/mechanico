@@ -37,5 +37,13 @@
                 "description": "Има опит с React и SolidWorks. Работи по приложна логика и 3D модели."
             }
         }
+    },
+    "search": {
+        "placeholder": "Търсене на механизми",
+        "results": {
+            "noResults": "Няма намерени резултати.",
+            "singleResult":"1 намерен резултат.",
+            "multiResult": " намерени резултата."
+        }
     }
 }

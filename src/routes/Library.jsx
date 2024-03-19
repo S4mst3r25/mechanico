@@ -37,7 +37,7 @@ function SearchBar({ searchList, filteredList }) {
     return (
         <>
             <div className="w-max flex">
-                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder="Search for mechanisms" className="border border-r-0 border-zinc-500 h-[52px] px-4 rounded-bl-md rounded-tl-md w-80"></input>
+                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] px-4 rounded-bl-md rounded-tl-md w-80"></input>
                 <button onClick={() => { searchLibrary(searchInput, searchList) }} className="bg-zinc-800 rounded-br-md rounded-tr-md px-3 hover:bg-zinc-700 transition group">
                     <span className="flex items-center">
                         <Icon size="26px">
@@ -52,7 +52,7 @@ function SearchBar({ searchList, filteredList }) {
 
 export default function Library() {
     const { t, i18n } = useTranslation()
-    const [resultsFoundNumber, setResultsFoundNumber] = useState(0)
+    const [result, setResult] = useState("")
 
     const fullModelList = [
         {
@@ -86,6 +86,7 @@ export default function Library() {
 
 
     const [filteredModelList, setFilteredModelList] = useState([...fullModelList])
+    let resultsFoundNumber = filteredModelList.length
 
     const [Cards, setCards] = useState([
         fullModelList.map((model) => {
@@ -97,9 +98,17 @@ export default function Library() {
         })
     ])
 
+    useEffect(() => {
+        resultsFoundNumber = filteredModelList.length
+        switch (resultsFoundNumber) {
+            case 0: setResult('search.results.noResults'); break
+            case 1: setResult('search.results.singleResult'); break
+            default: setResult('search.results.multiResult')
+        }
+    }, [filteredModelList])
+
     //Re-render cards when filtered list updates
     useEffect(() => {
-        setResultsFoundNumber(filteredModelList.length)       
         setCards([
             filteredModelList.map((model) => {
                 return (
@@ -117,7 +126,6 @@ export default function Library() {
             filteredModelList.map((model) => {
                 return (
                     <>
-                    {resultsFoundNumber == 1 ? console.log("1 result found") : <h1>{resultsFoundNumber} results found</h1>}                      
                         <Card key={model.modelId} img={model.img} name={t(model.name)} modelId={model.modelId} />
                     </>
                 )
@@ -135,11 +143,13 @@ export default function Library() {
             <h1 className="font-bold text-3xl mt-36 text-center">{t('library.title')}</h1>
             <div className="flex justify-center mt-10">
                 <SearchBar searchList={fullModelList} filteredList={setNewFilteredList} />
+
             </div>
             <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
+                    <h1 className='text-center mt-2 text-2xl'>{resultsFoundNumber <=1 ? t(result) : resultsFoundNumber + t(result)}</h1>
                     <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
-                       {filteredModelList == "" ? <h1 className="text-2xl">No results</h1> : Cards} 
+                        {Cards}
                     </div>
                 </div>
             </Suspense>
