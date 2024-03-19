@@ -7,13 +7,12 @@ Project Description
 ### Todo
 
 - [ ] On model part hover - information  window should pop up (feature) (IMPORTANT)  
-- [ ] Add exploded view feature to Viewer  (IMPORTANT)  
 - [ ] Add fallbacks / loading screens to site  
 - [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
 
 ### In Progress
 
-- [ ] SEO - Make site crawlable & register in Google  
+- [ ] Fix searchbar results message bug (shows without searching) & improve its looks  
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### Done ✓
