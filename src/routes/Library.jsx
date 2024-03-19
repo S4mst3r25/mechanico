@@ -52,6 +52,7 @@ function SearchBar({ searchList, filteredList }) {
 
 export default function Library() {
     const { t, i18n } = useTranslation()
+    const [resultsFoundNumber, setResultsFoundNumber] = useState(0)
 
     const fullModelList = [
         {
@@ -98,6 +99,7 @@ export default function Library() {
 
     //Re-render cards when filtered list updates
     useEffect(() => {
+        setResultsFoundNumber(filteredModelList.length)       
         setCards([
             filteredModelList.map((model) => {
                 return (
@@ -115,6 +117,7 @@ export default function Library() {
             filteredModelList.map((model) => {
                 return (
                     <>
+                    {resultsFoundNumber == 1 ? console.log("1 result found") : <h1>{resultsFoundNumber} results found</h1>}                      
                         <Card key={model.modelId} img={model.img} name={t(model.name)} modelId={model.modelId} />
                     </>
                 )
@@ -136,7 +139,7 @@ export default function Library() {
             <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
                     <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
-                        {Cards}
+                       {filteredModelList == "" ? <h1 className="text-2xl">No results</h1> : Cards} 
                     </div>
                 </div>
             </Suspense>
