@@ -11,14 +11,14 @@ Project Description
 - [ ] Homepage redesign / UI improvements (?)  
 
 ### S4mst3r25's tasks
-  
+
 - [ ] Nonexistent routes do not redirect to error page (BUG)  
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### TheHat1's tasks
 
-- [ ] Add clear button to searchbar (appears after search)  
-- [ ] Display mechanism name somewhere in ModelView/Viewer (?)
+- [ ] Add clear button to searchbar (appears after search) - empties searchbar value on click & resets filteredList to default state (all models)  
+- [ ] Add small box (div) in ModelView page to display current model name (Differential, Roots Blower... etc.)  
 
 ### Done ✓
 
