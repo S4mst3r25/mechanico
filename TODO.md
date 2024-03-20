@@ -16,8 +16,7 @@ Project Description
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### TheHat1's tasks
-
-- [ ] Add clear button to searchbar (appears after search) - empties searchbar value on click & resets filteredList to default state (all models) - IS INSIDE INPUT  
+ 
 - [ ] Add small box (div) in ModelView page to display current model name (Differential, Roots Blower... etc.) - ABOVE CONTROLS PANEL  
 
 ### Done ✓

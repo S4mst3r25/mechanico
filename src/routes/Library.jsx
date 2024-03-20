@@ -38,6 +38,7 @@ function SearchBar({ searchList, filteredList }) {
         <>
             <div className="w-max flex">
                 <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] px-4 rounded-bl-md rounded-tl-md w-80"></input>
+                
                 <button onClick={() => { searchLibrary(searchInput, searchList) }} className="bg-zinc-800 rounded-br-md rounded-tr-md px-3 hover:bg-zinc-700 transition group">
                     <span className="flex items-center">
                         <Icon size="26px">
@@ -45,6 +46,8 @@ function SearchBar({ searchList, filteredList }) {
                         </Icon>
                     </span>
                 </button>
+                
+                <button onClick={ () => {filteredList(searchList); setSearchInput("")}} className=' ml-1 text-zinc-400 hover:text-zinc-200 bg-zinc-800 rounded-md px-3 hover:bg-zinc-700 transition'>{t('search.clear')}</button>
             </div>
         </>
     )

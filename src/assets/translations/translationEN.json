@@ -40,6 +40,7 @@
     },
     "search": {
         "placeholder": "Search for mechanisms",
+        "clear": "Clear",
         "results": {
             "noResults": "No results",
             "singleResult": "1 result",

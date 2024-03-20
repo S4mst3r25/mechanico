@@ -40,6 +40,7 @@
     },
     "search": {
         "placeholder": "Търсене на механизми",
+        "clear": "Изчисти",
         "results": {
             "noResults": "Няма намерени резултати",
             "singleResult":"1 резултат",
