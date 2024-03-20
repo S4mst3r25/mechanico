@@ -8,12 +8,12 @@
     "library": {
         "title": "Библиотека от модели",
         "models": {
-            "diff": "Диференциал",
+            "differential": "Диференциал",
             "engine": "Двигател",
-            "blower": "Нагнетателна помпа",
-            "wankel": "Ванкелов двигател",
-            "robo-arm": "Механична ръка",
-            "suspension": "Двойно напречно окачване"
+            "rootsblower": "Нагнетателна помпа",
+            "wankelengine": "Ванкелов двигател",
+            "roboticgripper": "Механична ръка",
+            "doublewishbonesuspension": "Двойно напречно окачване"
         }
     },
     "viewer": {
@@ -40,7 +40,6 @@
     },
     "search": {
         "placeholder": "Търсене на механизми",
-        "clear": "Изчисти",
         "results": {
             "noResults": "Няма намерени резултати",
             "singleResult":"1 резултат",

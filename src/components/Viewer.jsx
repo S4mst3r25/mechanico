@@ -52,7 +52,7 @@ function Loader() {
     )
 }
 
-export default function Viewer({ modelPath }) {
+export default function Viewer({ modelPath, modelId }) {
     const [playbackSpeed, setPlaybackSpeed] = useState(0.5)
     const [elapsedTime, setElapsedTime] = useState(0)
     const [isPlaying, setIsPlaying] = useState(true)
@@ -61,7 +61,8 @@ export default function Viewer({ modelPath }) {
 
     return (
         <>
-            <div className="top-[94px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
+            <h1 className="bg-zinc-500 top-[85px] right-[20px] w-[380px] absolute text-center text-white text-3xl font-bold whitespace-nowrap z-20">{t('library.models.' + modelId)}</h1>
+            <div className="top-[134px] right-[20px] absolute bg-white z-10 w-[380px] text-center h-min shadow-md">
                 <div className="bg-zinc-800 p-3">
                     <h1 className="font-bold text-xl whitespace-nowrap text-white">{t("viewer.controls")}</h1>
                 </div>

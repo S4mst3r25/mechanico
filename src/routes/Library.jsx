@@ -8,7 +8,7 @@ import suspension from 'src/assets/images/thumbnails/suspension.png'
 import { useTranslation } from 'react-i18next'
 import { Suspense, useEffect, useState } from 'react'
 import { Icon } from '@ricons/utils'
-import { Search20Filled } from '@ricons/fluent'
+import { Search20Filled, Eraser20Filled } from '@ricons/fluent'
 
 function LoadingScreen() {
     return (
@@ -36,9 +36,15 @@ function SearchBar({ searchList, filteredList }) {
 
     return (
         <>
-            <div className="w-max flex">
-                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] px-4 rounded-bl-md rounded-tl-md w-80"></input>
-                
+            <div className="w-max flex">   
+                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] pl-4 rounded-bl-md rounded-tl-md w-96"></input>
+                <button onClick={() => { filteredList(searchList); setSearchInput("") }} className='text-zinc-200 hover:text-zinc-400 pr-3 border-zinc-500 border-y transition'>
+                    <span>
+                        <Icon size="26px">
+                            <Eraser20Filled/>
+                        </Icon>
+                    </span>
+                </button>
                 <button onClick={() => { searchLibrary(searchInput, searchList) }} className="bg-zinc-800 rounded-br-md rounded-tr-md px-3 hover:bg-zinc-700 transition group">
                     <span className="flex items-center">
                         <Icon size="26px">
@@ -46,8 +52,6 @@ function SearchBar({ searchList, filteredList }) {
                         </Icon>
                     </span>
                 </button>
-                
-                <button onClick={ () => {filteredList(searchList); setSearchInput("")}} className=' ml-1 text-zinc-400 hover:text-zinc-200 bg-zinc-800 rounded-md px-3 hover:bg-zinc-700 transition'>{t('search.clear')}</button>
             </div>
         </>
     )
@@ -60,7 +64,7 @@ export default function Library() {
     const fullModelList = [
         {
             img: differential,
-            name: "library.models.diff",
+            name: "library.models.differential",
             modelId: "differential"
         },
         {
@@ -70,19 +74,19 @@ export default function Library() {
         },
         {
             img: rootsblower,
-            name: "library.models.blower",
+            name: "library.models.rootsblower",
             modelId: "rootsblower"
         }, {
             img: wankel,
-            name: "library.models.wankel",
+            name: "library.models.wankelengine",
             modelId: "wankelengine"
         }, {
             img: gripper,
-            name: "library.models.robo-arm",
+            name: "library.models.roboticgripper",
             modelId: "roboticgripper"
         }, {
             img: suspension,
-            name: "library.models.suspension",
+            name: "library.models.doublewishbonesuspension",
             modelId: "doublewishbonesuspension"
         }
     ]
@@ -151,7 +155,7 @@ export default function Library() {
             </div>
             <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
-                    <h1 className='text-center mt-8 text-xl text-zinc-500'>{resultMessage == 'full' ? <></> : (resultCount > 1 ? resultCount + " " +  t(resultMessage) : t(resultMessage))}</h1>
+                    <h1 className='text-center mt-8 text-xl text-zinc-500'>{resultMessage == 'full' ? <></> : (resultCount > 1 ? resultCount + " " + t(resultMessage) : t(resultMessage))}</h1>
                     <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
                         {Cards}
                     </div>

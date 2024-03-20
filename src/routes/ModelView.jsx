@@ -9,12 +9,12 @@ export default function ModelView() {
 
     const models = modelsJson.models
 
-    let modelName = ""
+    let modelId = ""
     let modelPath = ""
 
     for (let i = 0; i < models.length; i++) {
         if (models[i].id == id) {
-            modelName = models[i].name
+            modelId = models[i].id
             modelPath = models[i].path
             foundModel = true
         }
@@ -22,7 +22,7 @@ export default function ModelView() {
 
     return (
         <>
-           {foundModel ? <Viewer modelPath={modelPath} /> : <Error/>} 
+           {foundModel ? <Viewer modelPath={modelPath} modelId={modelId} /> : <Error/>} 
         </>
     )
 }

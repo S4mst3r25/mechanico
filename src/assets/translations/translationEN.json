@@ -8,12 +8,12 @@
     "library": {
         "title": "Models library",
         "models": {
-            "diff": "Differential",
+            "differential": "Differential",
             "engine": "Engine",
-            "blower": "Roots blower",
-            "wankel": "Wankel engine",
-            "robo-arm": "Robotic arm gripper",
-            "suspension": "Double wishbone suspension"
+            "rootsblower": "Roots blower",
+            "wankelengine": "Wankel engine",
+            "roboticgripper": "Robotic arm gripper",
+            "doublewishbonesuspension": "Double wishbone suspension"
         }
     },
     "viewer": {
@@ -40,7 +40,6 @@
     },
     "search": {
         "placeholder": "Search for mechanisms",
-        "clear": "Clear",
         "results": {
             "noResults": "No results",
             "singleResult": "1 result",
