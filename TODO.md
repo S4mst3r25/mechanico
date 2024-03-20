@@ -17,8 +17,8 @@ Project Description
 
 ### TheHat1's tasks
 
-- [ ] Add clear button to searchbar (appears after search) - empties searchbar value on click & resets filteredList to default state (all models)  
-- [ ] Add small box (div) in ModelView page to display current model name (Differential, Roots Blower... etc.)  
+- [ ] Add clear button to searchbar (appears after search) - empties searchbar value on click & resets filteredList to default state (all models) - IS INSIDE INPUT  
+- [ ] Add small box (div) in ModelView page to display current model name (Differential, Roots Blower... etc.) - ABOVE CONTROLS PANEL  
 
 ### Done ✓
 
