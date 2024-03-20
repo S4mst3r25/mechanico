@@ -41,9 +41,9 @@
     "search": {
         "placeholder": "Търсене на механизми",
         "results": {
-            "noResults": "Няма намерени резултати.",
-            "singleResult":"1 намерен резултат.",
-            "multiResult": " намерени резултата."
+            "noResults": "Няма намерени резултати",
+            "singleResult":"1 резултат",
+            "multiResult": "резултата"
         }
     }
 }

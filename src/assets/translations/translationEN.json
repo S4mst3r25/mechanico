@@ -41,9 +41,9 @@
     "search": {
         "placeholder": "Search for mechanisms",
         "results": {
-            "noResults": "No results found.",
-            "singleResult": "1 result found.",
-            "multiResult": " results found."
+            "noResults": "No results",
+            "singleResult": "1 result",
+            "multiResult": "results"
         }
     }
 }

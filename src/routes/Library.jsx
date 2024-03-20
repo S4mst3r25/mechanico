@@ -52,7 +52,7 @@ function SearchBar({ searchList, filteredList }) {
 
 export default function Library() {
     const { t, i18n } = useTranslation()
-    const [result, setResult] = useState("")
+    const [resultMessage, setResultMessage] = useState("")
 
     const fullModelList = [
         {
@@ -86,7 +86,7 @@ export default function Library() {
 
 
     const [filteredModelList, setFilteredModelList] = useState([...fullModelList])
-    let resultsFoundNumber = filteredModelList.length
+    let resultCount = filteredModelList.length
 
     const [Cards, setCards] = useState([
         fullModelList.map((model) => {
@@ -99,11 +99,12 @@ export default function Library() {
     ])
 
     useEffect(() => {
-        resultsFoundNumber = filteredModelList.length
-        switch (resultsFoundNumber) {
-            case 0: setResult('search.results.noResults'); break
-            case 1: setResult('search.results.singleResult'); break
-            default: setResult('search.results.multiResult')
+        resultCount = filteredModelList.length
+        switch (resultCount) {
+            case 0: setResultMessage('search.results.noResults'); break
+            case 1: setResultMessage('search.results.singleResult'); break
+            case fullModelList.length: setResultMessage('full'); break
+            default: setResultMessage('search.results.multiResult')
         }
     }, [filteredModelList])
 
@@ -147,7 +148,7 @@ export default function Library() {
             </div>
             <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
-                    <h1 className='text-center mt-2 text-2xl'>{resultsFoundNumber <= 1 ? t(result) : resultsFoundNumber + t(result)}</h1>
+                    <h1 className='text-center mt-8 text-xl text-zinc-500'>{resultMessage == 'full' ? <></> : (resultCount > 1 ? resultCount + " " +  t(resultMessage) : t(resultMessage))}</h1>
                     <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
                         {Cards}
                     </div>

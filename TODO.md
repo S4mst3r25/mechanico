@@ -7,13 +7,15 @@ Project Description
 ### Todo
 
 - [ ] On model part hover - information  window should pop up (feature) (IMPORTANT)  
-- [ ] Add fallbacks / loading screens to site  
-- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
+- [ ] Code Splitting (?)  
+- [ ] Homepage redesign / UI improvements (?)  
 
 ### In Progress
 
-- [ ] Fix searchbar results message bug (shows without searching) & improve its looks  
+- [ ] Add clear button to searchbar (appears after search)  
+- [ ] Nonexistent routes do not redirect to error page (BUG)  
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
+- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
 
 ### Done ✓
 
