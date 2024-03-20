@@ -147,7 +147,7 @@ export default function Library() {
             </div>
             <Suspense fallback={<LoadingScreen />}>
                 <div className="m-auto">
-                    <h1 className='text-center mt-2 text-2xl'>{resultsFoundNumber <=1 ? t(result) : resultsFoundNumber + t(result)}</h1>
+                    <h1 className='text-center mt-2 text-2xl'>{resultsFoundNumber <= 1 ? t(result) : resultsFoundNumber + t(result)}</h1>
                     <div className="flex flex-wrap mt-16 gap-4 justify-center mb-14">
                         {Cards}
                     </div>
