@@ -10,12 +10,15 @@ Project Description
 - [ ] Code Splitting (?)  
 - [ ] Homepage redesign / UI improvements (?)  
 
-### In Progress
-
-- [ ] Add clear button to searchbar (appears after search)  
-- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
+### S4mst3r25's tasks
+  
 - [ ] Nonexistent routes do not redirect to error page (BUG)  
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
+
+### TheHat1's tasks
+
+- [ ] Add clear button to searchbar (appears after search)  
+- [ ] Display mechanism name somewhere in ModelView/Viewer (?)
 
 ### Done ✓
 
