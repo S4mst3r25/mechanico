@@ -13,9 +13,9 @@ Project Description
 ### In Progress
 
 - [ ] Add clear button to searchbar (appears after search)  
+- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
 - [ ] Nonexistent routes do not redirect to error page (BUG)  
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
-- [ ] Display mechanism name somewhere in ModelView/Viewer (?)  
 
 ### Done ✓
 
