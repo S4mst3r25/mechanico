@@ -6,16 +6,16 @@ Project Description
 
 ### Todo
 
+- [ ] Migrate to data router (createBrowserRouter) & Add custom error functionality  
 - [ ] On model part hover - information  window should pop up (feature) (IMPORTANT)  
 - [ ] Code Splitting (?)  
 - [ ] Homepage redesign / UI improvements (?)  
 
 ### S4mst3r25's tasks
 
-- [ ] Nonexistent routes do not redirect to error page (BUG) ~~~ Migrate to data router (createBrowserRouter)  
-- [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### TheHat1's tasks
+
 
 ### Done ✓
 

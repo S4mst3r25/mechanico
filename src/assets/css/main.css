@@ -1,16 +1,21 @@
 canvas {
-    filter: saturate(170%);
+  filter: saturate(170%);
 }
 
 .animatedGear {
-    animation: spin 50s linear infinite;
+  animation: spin 50s linear infinite;
 }
 
 @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+input:focus {
+    outline: none;
+}

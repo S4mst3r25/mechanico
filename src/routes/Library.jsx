@@ -8,7 +8,7 @@ import suspension from 'src/assets/images/thumbnails/suspension.png'
 import { useTranslation } from 'react-i18next'
 import { Suspense, useEffect, useState } from 'react'
 import { Icon } from '@ricons/utils'
-import { Search20Filled, Eraser20Filled } from '@ricons/fluent'
+import { Search20Filled, Eraser20Filled, Broom20Filled } from '@ricons/fluent'
 
 function LoadingScreen() {
     return (
@@ -36,15 +36,17 @@ function SearchBar({ searchList, filteredList }) {
 
     return (
         <>
-            <div className="w-max flex">   
-                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] pl-4 rounded-bl-md rounded-tl-md w-96"></input>
-                <button onClick={() => { filteredList(searchList); setSearchInput("") }} className='text-zinc-200 hover:text-zinc-400 pr-3 border-zinc-500 border-y transition'>
-                    <span>
-                        <Icon size="26px">
-                            <Eraser20Filled/>
+            <div className="w-max flex">
+                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] pl-4 rounded-bl-md rounded-tl-md w-96 focus:border-black peer"></input>
+                <div className="border-y border-zinc-500 flex items-center px-1 w-9 peer-focus:border-black">
+                    {searchInput != "" ? 
+                    <button onClick={() => { filteredList(searchList); setSearchInput("") }} className='text-zinc-500 hover:text-zinc-700 flex items-center border-zinc-500 mr-1'>
+                        <Icon size="22px">
+                            <Broom20Filled />
                         </Icon>
-                    </span>
-                </button>
+                    </button>
+                    : <></>}
+                </div>
                 <button onClick={() => { searchLibrary(searchInput, searchList) }} className="bg-zinc-800 rounded-br-md rounded-tr-md px-3 hover:bg-zinc-700 transition group">
                     <span className="flex items-center">
                         <Icon size="26px">
