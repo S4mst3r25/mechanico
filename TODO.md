@@ -16,8 +16,6 @@ Project Description
 - [ ] Add thumbnails as a part of the models.json file & use it in Library (?)  
 
 ### TheHat1's tasks
- 
-- [ ] Add small box (div) in ModelView page to display current model name (Differential, Roots Blower... etc.) - ABOVE CONTROLS PANEL  
 
 ### Done ✓
 
