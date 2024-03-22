@@ -37,7 +37,7 @@ function SearchBar({ searchList, filteredList }) {
     return (
         <>
             <div className="w-max flex">
-                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] pl-4 rounded-bl-md rounded-tl-md w-96 focus:border-black peer"></input>
+                <input value={searchInput} onChange={e => setSearchInput(e.target.value)} type="text" placeholder={t('search.placeholder')} className="border border-r-0 border-zinc-500 h-[52px] pl-4 rounded-bl-md rounded-tl-md sm:w-96 w-72 focus:border-black peer"></input>
                 <div className="border-y border-zinc-500 flex items-center px-1 w-9 peer-focus:border-black">
                     {searchInput != "" ? 
                     <button onClick={() => { filteredList(searchList); setSearchInput("") }} className='text-zinc-500 hover:text-zinc-700 flex items-center border-zinc-500 mr-1'>
